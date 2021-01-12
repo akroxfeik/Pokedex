@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="itemData"
+            type="com.tekever.pokemon.model.PokemonMove" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvMove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@{Character.toUpperCase(itemData.move.name.charAt(0)) + itemData.move.name.substring(1)}"
+            android:textColor="#FFF"/>
+    </RelativeLayout>
+</layout>

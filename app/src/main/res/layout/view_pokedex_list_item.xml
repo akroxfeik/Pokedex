@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="itemData"
+            type="com.tekever.pokemon.model.PokemonPokeDexNumber" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@{String.valueOf(itemData.entry_number)}"
+            android:gravity="center"
+            android:textColor="#FFF"/>
+        <TextView
+            android:id="@+id/tvRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@{Character.toUpperCase(itemData.pokedex.name.charAt(0)) + itemData.pokedex.name.substring(1)}"
+            android:textColor="#FFF"
+            android:layout_toRightOf="@+id/tvNumber"/>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.tekever.pokemon.view.ui.pokelist.MainFragment"
+        android:label="Pokemon"
+        tools:layout="@layout/main_fragment">
+        <action
+            android:id="@+id/action_pokeListFragment_to_pokeDetailFragment"
+            app:destination="@id/PokemonDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PokemonDetailFragment"
+        android:name="com.tekever.pokemon.view.ui.pokedetails.PokemonDetailFragment"
+        android:label="Pokemon Details">
+        <argument
+            android:name="name"
+            android:defaultValue="ditto"
+            app:argType="string"/>
+    </fragment>
+</navigation>

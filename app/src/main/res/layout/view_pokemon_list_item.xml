@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="itemData"
+            type="com.tekever.pokemon.model.PokemonItem" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ivPokemon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+        <TextView
+            android:id="@+id/tvPokemon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivPokemon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@{Character.toUpperCase(itemData.name.charAt(0)) + itemData.name.substring(1)}"
+            android:textColor="#FFF"/>
+    </RelativeLayout>
+</layout>
